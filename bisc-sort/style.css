@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+    font-size : 1.6rem;
+    height: 100vh;
+    display: grid;
+    place-items:center ;
+    
+}
+.hide{
+    display: none;
+}
+main{
+    display: flex;
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.8rem;
+
+    border-radius: .6rem;
+    background: #FFF;
+    box-shadow: 0 .2rem .4rem 0 rgba(0, 0, 0, 0.10);
+
+    width:min(42.8rem, 90%);
+    margin-top: -12rem;
+
+    text-align: center;
+}
+h1{
+    color: #34355B;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1.4rem;
+}
+p{
+    color: #34355B;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2rem;
+}
+/*button{
+    /*background: url("./images/Ebene4.svg");*/
+    
+/*}*/
+
+
+.screen2 div{
+    background: #E4EDF1;
+    box-shadow: .2rem .2rem .2rem  rgba(85, 85, 85, 0.50);
+    padding: 1rem;
+
+    width: min(29rem,90%);
+    height: min(10rem,90%);
+    gap: 1rem;
+    margin-bottom: 5rem;
+    animation: downtop 700ms 700ms backwards;
+
+}
+.screen2 div p{
+    color: #000;
+    text-align: center;
+    font-family: 'Dancing Script';
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.screen2 img{
+    margin-bottom: 5rem;
+}
+
+.screen2 button{
+    padding: 1.6rem;
+    border-radius: .4rem;
+    background: #FF9500;
+
+    color: #FFF;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.screen1 button:hover {
+    animation: gradient 2s ease infinite;
+   
+}
+
+@keyframes gradient {
+    0%   { transform: translateX(0); }
+    25%   {transform: translateX(.5rem)}
+    50%  { transform: translateX(-.5rem); }
+    100% { transform: translateX(0); }
+  }
+
+  @keyframes downtop{
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }    
+}
