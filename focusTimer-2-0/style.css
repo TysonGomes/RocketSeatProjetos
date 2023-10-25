@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --hue:194;
+    --bg-color:hsl(var(--hue),5%,7%);
+    --text-color:hsl(var(--hue),40%,98%);
+    --primary-color:hsl(var(--hue),100%,63%);
+    --controls-bg-color:hsl(var(--hue),0%,14%);
+    --button-secondary: hsl(var(--hue), 40%, 98%);
+    font-size: clamp(40%, 1% + 2vw ,62.5%);
+
+}
+
+html.light{
+    --text-color:hsl(var(--hue),5%,7%);
+    --bg-color:hsl(var(--hue),40%,98%);
+    --primary-color:hsl(var(--hue),100%,63%);
+    --controls-bg-color:hsl(var(--hue),0%,14%);
+}
+
+html.rain{
+    --bg-color:hsl(var(--hue), 74%, 43%);  
+}
+html.florest{
+    --bg-color:hsl(155, 67%, 45%); 
+}
+
+html.fire{
+    --bg-color:hsl(20, 91%, 49%);
+}
+html.coffee{
+    --bg-color:hsl(43, 29%, 51%);
+}
+
+
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+    display: none;
+}
+
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 0;
+    color: var(--text-color);
+}
+
+.sr-only{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+
+    margin: -1px;
+    padding: 0px;
+    border : 0;
+    appearance: none;
+}
+
+body{
+    background-color: var(--bg-color);
+    color:var(--text-color);
+
+    display:  grid;
+    height: 100vh;
+    place-content: center;
+}
+
+#app{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.flex{
+    display: flex;
+}
+
+#timer{
+    font-size: 9.6rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    justify-content: center;
+}
+#sounds{
+    display: grid; 
+}
+#modes{
+    display: grid;
+    margin: 1rem;
+    gap: 3rem;
+    grid-template-columns: 1f 1fr;
+    grid-template-areas: "A B" 
+                          "C D"                           
+}
+
+#modes button:nth-child(1){
+    grid-area: A ;
+}
+#modes button:nth-child(2){
+    grid-area: B ;
+}
+#modes button:nth-child(3){
+    grid-area: C;
+}
+#modes button:nth-child(4){
+    grid-area: D ;
+}
+#modes button {
+    height:15rem ;
+    width: 13rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    background-color: #E1E1E6;
+}
+#controls{
+    margin-top: 1.6rem;
+    padding: 2.2rem 4rem;
+    gap: 1.6rem;
+    background-color: var(--controls-bg-color);
+    border-radius: 999rem;
+    
+}
+
+button{
+    background-color: transparent;
+    border:0;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 6.4rem;
+}
+
+.secondary{
+    color: var(--button-secondary);
+}
+
+/*controls*/
+
+
+.running .ph-timer,
+.ph-timer,
+.music-on .ph-speaker-none,
+.ph-stop-circle,
+.ph-speaker-none,
+.ph-speaker-high,
+html:not(.running) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-high
+{
+   display:none; 
+}
