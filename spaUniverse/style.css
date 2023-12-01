@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root{
+    font-size: clamp(40%, 1% + 2vw ,62.5%);
+    --ff-all: "Roboto";
+    --fc-second : #8D8D99;
+    --fc-primary:#ffffff;
+
+}
+
+
+body{
+    background-image: url("./assets/mountains-universe-1.png");
+    font-family: var(--ff-all);
+    
+}
+
+nav{
+    display: flex;
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.1rem;
+    gap:3.2rem;
+    padding-right: 0px;
+    align-items: center;
+    padding: 4rem 72rem 4rem 7.2rem
+}
+
+div{
+    width: 64rem;
+    height: 20rem;
+    margin-top: 6.3rem;
+    margin-left: 10rem;
+    display: grid;
+    justify-content: center;
+} #app h1{
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 6rem;
+}
+#app p{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 2.8rem;
+}
+#app a{
+    text-decoration:none;
+}
+#app  button{
+
+    display: inline-flex;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+
+    color: var(--fc-primary);
+    background-color: transparent;
+    padding: 1.2rem 3rem;
+    border-radius: 5px;
+    border: 2px solid #FFF;
+
+    text-align: center;
+  
+    font-size: 1.4rem;
+    font-style: normal;
+
+}
+#app  button:hover{
+    background-color: #FFF;
+    color: black;
+    cursor: pointer;
+    
+}
+
+nav a {
+    text-decoration:none;
+    color: var(--fc-second);
+    
+}nav a:hover{
+    color: white;
+}
+
+h1,p{
+    color:#E1E1E6 ;
+}
+
+html.universe body{
+    background-image: url("./assets/mountains-universe02.png");
+}
+html.explorer body{
+    background-image: url("./assets/mountains-universe-3.png");
+}
+
+
+html.home div{
+    width: auto;
+    height: 20rem;
+    margin-top: 20%;
+    margin-left: 10rem;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
